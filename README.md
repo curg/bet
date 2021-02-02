@@ -27,3 +27,20 @@ Betting game system on CVT (v1)
 > `BetCVT` is a random game on `CVT` which is the virtual token only using for governance in a study group `CURG` .
 >
 > JUST DO IT FOR THE FUN ! ENJOY IT :smile:
+
+---
+
+# Docgen
+
+## Install
+
+```bash
+npm install solc@0.5
+npm install docgen
+```
+
+## Create Docs
+
+```bash
+solidity-docgen --solc-module ./node_modules/solc
+```
