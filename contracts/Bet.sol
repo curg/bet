@@ -129,7 +129,7 @@ contract Bet is Context, MultiOwnable, IBet {
     }
 
     /**
-     * @dev Returns the number of exponent.
+     * @dev Returns the number of {_feeconst}.
      */
     function getFeeConst(
         // ...
@@ -138,7 +138,7 @@ contract Bet is Context, MultiOwnable, IBet {
     }
 
     /**
-     * @dev Sets {_exponent} to a value other than the default one of 2.
+     * @dev Sets {_feeconst} to a value other than the default one of 8.
      */
     function setFeeConst(
         uint8 newFeeConst
