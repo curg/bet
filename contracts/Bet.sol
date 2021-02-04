@@ -75,7 +75,8 @@ contract Bet is Context, MultiOwnable, IBet {
     ) {
         // conditions
         require(percentage < 100, "Percentage MUST be lower than 100 .");
-        require(!_msgSender().isContract(), "The caller MUST NOT be a contract address.");
+        address sender = _msgSender();
+        require(!sender.isContract(), "The caller MUST NOT be a contract address.");
 
         // `fee = amount * _feeconst * (p**2)` where `p = percentage / 100`
         // `fee > 1` when `amount >= 13` where `_feeconst = 8`
