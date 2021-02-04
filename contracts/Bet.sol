@@ -77,8 +77,8 @@ contract Bet is Context, MultiOwnable, IBet {
         require(percentage < 100, "Percentage MUST be lower than 100 .");
 
         // `fee = amount * _feeconst * (p**2)` where `p = percentage / 100`
-        // `fee > 1` when `amount >= 13` where `b = 8`
-        // if `percentage >= 94`, you would lose out beacause of 'fee' where 'b = 8'
+        // `fee > 1` when `amount >= 13` where `_feeconst = 8`
+        // if `percentage >= 94`, you would lose out beacause of 'fee' where '_feeconst = 8'
         uint256 numerator = uint256(_feeconst).mul(uint256(percentage)).mul(uint256(percentage));
         uint256 fee = uint256(amount).mul(numerator).div(100**3);
         fee = fee.add(uint256(amount));
