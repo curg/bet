@@ -44,3 +44,9 @@ npm install docgen
 ```bash
 solidity-docgen --solc-module ./node_modules/solc
 ```
+
+---
+
+# TODO
+
+- [ ] Mitigating fee or fee-const when the number of users are decreased in a some window.
